@@ -27,6 +27,33 @@
 }
 
 .list-formulario{
-  margin-bottom: 20px;
-  border: 1px solid #fff;
+  margin-bottom: 40px;
+}
+.letrita{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 45px;
+}
+.letrita2{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+ion-content.background{
+  --background: url(https://i.pinimg.com/originals/89/d9/e8/89d9e87c4d79c698acdfd1a9bfb90013.gif) ;
+}
+.my-element {
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(255, 101, 78), 0 0 70px rgb(255, 27, 27), 0 0 80px rgb(176, 36, 15), 0 0 100px rgb(133, 15, 15), 0 0 150px rgb(94, 7, 7);
+  animation: rgb-border 10s ease-in-out infinite;
+}
+
+@keyframes rgb-border {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(101, 103, 255), 0 0 70px rgb(16, 46, 214), 0 0 80px rgb(30, 14, 153), 0 0 100px rgb(34, 6, 94), 0 0 150pxrgb(3, 3, 68)f;
+  }
+  50% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(203, 97, 236), 0 0 70px rgb(208, 70, 232), 0 0 80px rgb(215, 44, 213), 0 0 100px rgb(156, 19, 158), 0 0 150px rgb(122, 9, 116);
+  }
+  100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px rgb(193, 95, 239), 0 0 70px rgb(172, 64, 223), 0 0 80px rgb(154, 45, 204), 0 0 100px rgb(87, 9, 123), 0 0 150px rgb(255, 101, 78);
+  }
 }

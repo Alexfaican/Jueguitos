@@ -1,42 +1,58 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" >
   <ion-toolbar>
-    <ion-title>
-      Registro
+    <ion-title class="letrita">
+      Fazbear Entertainment
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"  class="background">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Registro</ion-title>
+      <ion-title size="large">Juegos</ion-title>
     </ion-toolbar>
   </ion-header>
 
 <ion-list class="list-formulario">
   <ion-item>
-    <ion-input type="text" placeholder="Cedula" [(ngModel)]="newPersona.cedula"></ion-input>
+    <ion-input type="text" [(ngModel)]="newPersona.nombre"label="Juego" label-placement="floating" 
+    fill="solid" type="text" placeholder="Juego"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="text" placeholder="Nombre" [(ngModel)]="newPersona.nombre"></ion-input>
+    <ion-input type="text" [(ngModel)]="newPersona.desarrolladora" label="Desarrolladora" label-placement="floating" 
+    fill="solid" type="text" placeholder="Desarrolladora"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-input type="text" placeholder="Apellido" [(ngModel)]="newPersona.apellido"></ion-input>
+  <ion-item >
+    <ion-label>Foto:</ion-label>
+    <ion-button color="dark" style="height: 40px; width: 40px;">
+      <label for="file-uploap">
+        <ion-icon slot="icon-only" name="images" style="height: 80px; width: 30px; color: white;"></ion-icon>
+      </label>
+      <input (change)="newImage($event)" id="file-uploap" style="display: none ;" type="file" accept="images/jpeg" [(ngModel)]="newPersona.foto">
+    </ion-button>
+   
+    <ion-input type="text"  [(ngModel)]="newPersona.foto" label="Ingrese la URL" label-placement="floating" 
+      fill="solid" type="text" placeholder="Imagen" ></ion-input>
   </ion-item>
+  <ion-fab vertical="bottom" horizontal="end" >
+    <ion-fab-button (click)="save()" size="small" color="success">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
   </ion-list>
+
 <ion-list>
-  <ion-item *ngFor="let p of Personas" >
-    <ion-label>{{p.cedula}}</ion-label>
-    <ion-label>{{p.nombre}}</ion-label>
-    <ion-label>{{p.apellido}}</ion-label>
+  <ion-item *ngFor="let p of Personas">
+    <ion-card style="background-color: rgb(0, 0, 0); width: 300px;" class="my-element">
+      <img alt="{{p.foto}}" src="{{p.foto}}" style="width: 100%; height: auto;">
+    
+    <ion-label><h1 style="color: white;" class="letrita2">&nbsp;{{p.nombre}}</h1></ion-label>
+    <ion-label style="color: rgb(165, 165, 165);">&nbsp;&nbsp;{{p.desarrolladora}}</ion-label>
+    
     <ion-button (click)="delete(p)" color="danger" >
       <ion-icon slot="icon-only" name="close-circle-outline" ></ion-icon>
     </ion-button>
+  </ion-card>
   </ion-item>
 </ion-list>
-<ion-fab vertical="bottom" horizontal="end" >
-<ion-fab-button (click)="save()" size="small" color="success">
-  <ion-icon name="add-circle-outline"></ion-icon>
-</ion-fab-button>
-</ion-fab>
 </ion-content>

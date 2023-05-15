@@ -4,14 +4,13 @@
 
 export const environment = {
   production: false,
-  firebaseConfig:{
-    apiKey: "AIzaSyDkY-nR8kC_-EDSC4sjgScFtjr3BVkOOb0",
-    authDomain: "velasquezmiltong1insumo1.firebaseapp.com",
-    databaseURL: "https://velasquezmiltong1insumo1-default-rtdb.firebaseio.com",
-    projectId: "velasquezmiltong1insumo1",
-    storageBucket: "velasquezmiltong1insumo1.appspot.com",
-    messagingSenderId: "770265989698",
-    appId: "1:770265989698:web:4cb11766da01ffca3563db"
+  firebaseConfig: {
+    apiKey: "AIzaSyDqYhVSEoI0bHSJsbx2r0yQXMzJBqj7U5w",
+    authDomain: "jueguitosff.firebaseapp.com",
+    projectId: "jueguitosff",
+    storageBucket: "jueguitosff.appspot.com",
+    messagingSenderId: "327969572139",
+    appId: "1:327969572139:web:3deb27b8766d71e53a716e"
   }
 };
 
